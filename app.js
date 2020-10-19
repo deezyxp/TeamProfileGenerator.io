@@ -18,8 +18,6 @@ const employees = [];
 
 startQuestions();
 
-let addEmployee = true;
-
 function startQuestions() {
   inquirer.prompt([{
       type: "input",
