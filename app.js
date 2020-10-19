@@ -11,6 +11,11 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 const employees = [];
 
+// 1. ask details: name, id number, email, role
+// 2. ask if you want to add more
+// 3. if yes, re-run step 1
+// 4. if no, render html
+
 startQuestions();
 
 let addEmployee = true;
@@ -19,23 +24,15 @@ function startQuestions() {
   inquirer.prompt([{
       type: "input",
       name: "nameEmployee",
-      message: "Enter employee's name:"
+      message: "Enter Manager's name:"
     }, {
       type: "input",
       name: "idEmployee",
-      message: "Enter employee ID number: "
+      message: "Enter Manager ID number: "
     }, {
       type: "input",
       name: "emailEmployee",
-      message: "Enter employee email address: "
-    },
-    {
-      type: "list",
-      name: "employeeRole",
-      message: "Enter Employees role:",
-      choices: [
-        "Manager",
-      ]
+      message: "Enter Manager email address: "
     },
     {
       type: "input",
@@ -62,8 +59,10 @@ function startQuestions() {
         break;
       case "Intern":
         internQuestions();
+        break;
       default:
         renderHtml();
+        break;
     }
   })
 }
@@ -103,8 +102,10 @@ function engineerQuestions() {
         break;
       case "Intern":
         internQuestions();
+        break;
       default:
         renderHtml();
+        break;
     }
   })
 }
