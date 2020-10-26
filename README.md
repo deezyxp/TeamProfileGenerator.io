@@ -1,5 +1,6 @@
 # TeamProfileGenerator.io
 
+<<<<<<< HEAD
 This application generates a website automatically for your company employees
 
 ## Description
@@ -35,3 +36,6 @@ Follow onscreen prompts to use application
 ## Screenshot
 
 <img src = "Assets/team.generator.PNG" alt="Screenshot">
+=======
+An application that allows you to input Employee ID and description to produce a webpage that displays information respectively.
+>>>>>>> 950a500f576a16f6840a7686540cc2277b153727
